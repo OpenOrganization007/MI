@@ -43,6 +43,12 @@ public class DoubleLinkedList<E> {
 		return item;
 	}
 	public void search(E item){
+		Node temp = head;
+		while (temp != null){
+			if(temp.item.equals(item))
+				break;
+			temp = temp.next;
+		}
 		
 	}
 	 
