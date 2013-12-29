@@ -45,7 +45,7 @@ public class DoubleLinkedList<E> {
 	public void search(E item){
 		
 	}
-	
+	 
 	public void display(){
 		Node temp = head;
 		while (temp != null){
