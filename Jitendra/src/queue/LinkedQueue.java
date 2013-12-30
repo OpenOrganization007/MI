@@ -54,6 +54,8 @@ public class LinkedQueue<E> {
 		q.deQueue();
 		q.deQueue();
 		q.displayQueue();
+		q.enQueue(200);
+		q.displayQueue();
 		
 
 	}

@@ -43,16 +43,18 @@ public class SingleList<E> {
 		
 	}
 	
-	public E search(E item){
-		Node temp = head ;
+	public boolean find(E item){
+		boolean status = false ;
+		Node temp = head;
 		while(temp != null){
 			
 			if(temp.data.equals(item)){
+				status = true;
 				break;
 			}
 			temp = temp.next;
 		}
-		return item;
+		return status;
 	}
 
 	public void display(){
@@ -87,12 +89,12 @@ public class SingleList<E> {
 	    System.out.println();
 	    System.out.println("Enter item to be search in list :");
 	    int item = Integer.parseInt(dis.readLine());
-	    Object searched = list.search(item);
-	    if(searched  != null){
-	    	System.out.println( item +" is found in list");
-	    }else {
-	    	System.out.println(item + "  is not found in list ");
-	    }
+//	    Object searched = list.search(item);
+//	    if(searched  != null){
+//	    	System.out.println( item +" is found in list");
+//	    }else {
+//	    	System.out.println(item + "  is not found in list ");
+//	    }
 	    
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
