@@ -1,4 +1,4 @@
-package datastructure.stack;
+package stack;
 
 public class TripleStack<E> {
 	
