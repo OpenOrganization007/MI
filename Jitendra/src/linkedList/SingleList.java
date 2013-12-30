@@ -104,14 +104,14 @@ public class SingleList<E> {
 		}
     	list.display();
     	System.out.println();
-//		DataInputStream dis = new DataInputStream(System.in);
-//		 System.out.println();
-//	    System.out.println("Enter item to be delete ");
-//	    try {
-//			list.delete(Integer.parseInt(dis.readLine()));
-//	
-//	    System.out.println("After deleting item list : ");
-//	    list.display();
+		DataInputStream dis = new DataInputStream(System.in);
+		 System.out.println();
+    System.out.println("Enter item to be delete ");
+    try {
+			list.delete(Integer.parseInt(dis.readLine()));
+	
+	    System.out.println("After deleting item list : ");
+	    list.display();
 //	    System.out.println();
 //	    System.out.println("Enter item to be search in list :");
 //	    int item = Integer.parseInt(dis.readLine());
@@ -122,15 +122,15 @@ public class SingleList<E> {
 //	    	System.out.println(item + "  is not found in list ");
 //	    }
 	    
-//		} catch (NumberFormatException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		System.out.println("Kth element in list is");
-	    System.out.println(list.findKth(list, 6));
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		System.out.println("Kth element in list is");
+//	    System.out.println(list.findKth(list, 6));
 	}
 
 }
