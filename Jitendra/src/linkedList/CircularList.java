@@ -12,6 +12,7 @@ public class CircularList<E> {
 			this.prev = null;
 		}
 	}
+
 	
 	public void add(E item){
 		if(head == null){
