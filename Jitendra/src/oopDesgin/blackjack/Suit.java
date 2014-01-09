@@ -1,4 +1,4 @@
-package oopDesgin.backjack;
+package oopDesgin.blackjack;
 
 public enum Suit {
 	CLUB(0),SPADES(1),HEART(2),DIAMOND(3);

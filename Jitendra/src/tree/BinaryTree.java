@@ -76,6 +76,18 @@ public class BinaryTree<T> {
 		displayTree(temp1.left);
 		displayTree(temp1.right);
 	}
+	
+	public boolean isBalence(){
+		if(root == null) return true ;
+		else{
+		int left = height(root.left);
+		int right = height(root.right);
+		if(left-right >1 || right -left >1){
+			return false;
+		}
+		}
+		return true;
+	}
 
 
 	public static void main(String[] args) {
@@ -85,6 +97,8 @@ public class BinaryTree<T> {
 			tree.add(i);
 		}
 		tree.print();
+		
+		System.out.println(tree.isBalence());
 
 	}
 

@@ -1,4 +1,4 @@
-package oopDesgin.backjack;
+package oopDesgin.blackjack;
 
 import java.util.ArrayList;
 

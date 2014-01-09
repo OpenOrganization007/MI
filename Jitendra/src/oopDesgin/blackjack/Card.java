@@ -1,4 +1,4 @@
-package oopDesgin.backjack;
+package oopDesgin.blackjack;
 
 
 public abstract class Card {
