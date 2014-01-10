@@ -109,33 +109,30 @@ public class Avl<T> {
 	public static void main(String[] args) {
 
 		int[] test = { 64, 1, 14, 26, 13, 110, 98, 85 };
-		String[]arr = {"Ram","syam","sita" ,"gita","mukes","hari"};
-//		Avl<String> tree = new Avl<String>(new Comparator<Integer>() {
-//
-//			@Override
-//			public int compare(Integer a, Integer b) {
-//				if (a == null && b != null) {
-//					return b;
-//				}
-//				if (a != null && b == null) {
-//					return a;
-//				}
-//				if (a != null && b != null) {
-//					return a - b;
-//				}
-//				return 0;
-//			}
-//		});
+//		String[]arr = {"Ram","syam","sita" ,"gita","mukes","hari"};
+		
 
-		Avl<String> tree = new Avl<String>(new Comparator<String>() {
-
+			Avl<Integer> tree = new Avl<Integer>(new Comparator<Integer>() {
 			@Override
-			public int compare(String a, String b) {
-				return a.compareTo(b);
+			public int compare(Integer a, Integer b) {
+				if (a == null && b != null) {
+					return b;
+				}
+				if (a != null && b == null) {
+					return a;
+				}
+				if (a != null && b != null) {
+					return a - b;
+				}
+				return 0;
 			}
 		});
-		for(String s : arr){
-			tree.add(s);
+
+		
+
+	
+		for(int i : test){
+			tree.add(i);
 			tree.print();
 		}
 	
