@@ -137,6 +137,34 @@ public class BST<T> {
               
       return itemData;
         }
+        
+        public Node getSuccessor(T item){
+        	Node temp = root;
+        	Node parent = root;
+        	while(temp.data != item){
+        		parent = temp;
+        		if(comparator.compare(item, (T) temp.data) > 0){
+        			temp = temp.right;
+        		}else{
+        			temp = temp.left;
+        		}
+        	}
+         if(temp.right != null){
+        	 return minimum(temp.right);
+         }else if(comparator.compare((T) parent.data, (T)temp.data) > 0){
+        	return parent;
+         }
+        	
+        	return null;
+        }
+        
+        private Node minimum(Node temp){
+        	while(temp.left != null){
+        		temp = temp.left;
+        	}
+        	return temp;
+        	
+        }
         /**
          * @param args
          */
@@ -167,7 +195,8 @@ public class BST<T> {
                 System.out.println();*/
                 System.out.print("in order :");
                 tree.inOrder();
-                System.out.println();
+                System.out.println("successor is "+tree.getSuccessor(9).data);
+             /*   System.out.println();
                 
                 	System.out.println("Enter item to be search in tree");
                 	DataInputStream dis = new DataInputStream(System.in);
@@ -182,8 +211,8 @@ public class BST<T> {
 						e.printStackTrace();
 					}
               
-                tree.searchItem(option);
-                
+              //  tree.searchItem(option);
+*/                
 
         }
 
