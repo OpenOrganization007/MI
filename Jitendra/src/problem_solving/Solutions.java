@@ -1,40 +1,38 @@
 package problem_solving;
 
+
 import java.util.Scanner;
 
 public class Solutions {
-    
-    public static void insertionSort(int[] ar){
-    	boolean sift = false;
-        for(int i = 1; i<ar.length;i++){
-           int j = i-1;
-            while(j>0 && ar[i] < ar[j]){
-                int temp = ar[i];
-                ar[i] = ar[j];
-                ar[j] = temp;
-                i--;
-                j--;
-                sift = true;
-            }
-            if(sift)
-            printArray(ar);
-            sift = false;
-        }
 
-}
-/* Tail starts here */
-static void printArray(int[] ar) {
-      for(int n: ar){
-         System.out.print(n+" ");
-      }
-        System.out.println("");
-   }
     
-   public static void main(String[] args) {
-      //  Scanner in = new Scanner(System.in);
-        //int n = in.nextInt();
-        int[] ar = {1 ,4 ,3 ,5 ,6 ,2};
-      
-        insertionSort(ar);
-    }    
+    public static int missingNumber(int[]arr){
+        int[]commonDiff = new int[arr.length-1];
+        int missingTerm=0;
+        int k=0;
+        for(int i=1;i<arr.length;i++){
+            for(int j=i-1; j < i ;j++){
+            commonDiff[k] = arr[i]-arr[j];
+             k++;
+            }
+        }
+        
+        int firstDiff = commonDiff[0];
+        for(int i=1;i<commonDiff.length;i++){
+            if(firstDiff == commonDiff[i]){
+                continue;
+            }else{
+               missingTerm = (arr[i]+arr[i+1])/2;
+              break;
+            }
+        }
+        return missingTerm;
+    }
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        int []arr ={51, 11, 31, 41, 51 };
+            System.out.println(missingNumber(arr));
+            
+    }
+
 }
