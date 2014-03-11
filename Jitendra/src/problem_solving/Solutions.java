@@ -1,7 +1,10 @@
 package problem_solving;
 
 
+import java.util.Scanner;
+
 public class Solutions {
+
     
     public static int missingNumber(int[]arr){
         int[]commonDiff = new int[arr.length-1];
@@ -31,4 +34,5 @@ public class Solutions {
             System.out.println(missingNumber(arr));
             
     }
+
 }
