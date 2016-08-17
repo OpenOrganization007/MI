@@ -256,7 +256,7 @@ public class BinaryTree<T>
 	tree.inOrder();
 
 	// tree.deleteNode(4);
-	// System.out.println(tree.getSuccessor(2).data);
+	//     System.out.println(tree.getSuccessor(2).data);
 
 	// System.out.println(tree.isBalence());
 
